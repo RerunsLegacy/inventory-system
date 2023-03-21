@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="450.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="code.c482project.controller.ModifyPartController">
+   <children>
+      <Label layoutX="75.0" layoutY="50.0" prefHeight="17.0" prefWidth="70.0" text="Modify Part" />
+      <RadioButton fx:id="inhouse" layoutX="175.0" layoutY="50.0" mnemonicParsing="false" onAction="#oninhouse" selected="true" text="In-House">
+         <toggleGroup>
+            <ToggleGroup fx:id="inoutgroup" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourced" layoutX="300.0" layoutY="50.0" mnemonicParsing="false" onAction="#onoutsourced" text="Outsourced" toggleGroup="$inoutgroup" />
+      <Label layoutX="85.0" layoutY="140.0" text="Name" />
+      <Label layoutX="85.0" layoutY="260.0" text="Max" />
+      <Label layoutX="85.0" layoutY="220.0" text="Price/Cost" />
+      <Label layoutX="85.0" layoutY="180.0" text="Stock" />
+      <TextField fx:id="nameinput" layoutX="175.0" layoutY="140.0" />
+      <TextField fx:id="stockinput" layoutX="175.0" layoutY="180.0" />
+      <TextField fx:id="priceinput" layoutX="175.0" layoutY="220.0" />
+      <TextField fx:id="maxinput" layoutX="175.0" layoutY="260.0" />
+      <Label layoutX="85.0" layoutY="100.0" text="ID" />
+      <TextField fx:id="idinput" editable="false" layoutX="175.0" layoutY="100.0" />
+      <Label layoutX="360.0" layoutY="260.0" text="Min" />
+      <TextField fx:id="mininput" layoutX="400.0" layoutY="260.0" />
+      <Button fx:id="toMain" layoutX="450.0" layoutY="350.0" mnemonicParsing="false" onAction="#toMain" text="Cancel" />
+      <Button layoutX="400.0" layoutY="350.0" mnemonicParsing="false" onAction="#onSave" text="Save" />
+      <Label fx:id="machineidORcompanyname" layoutX="85.0" layoutY="300.0" text="Machine ID" />
+      <TextField fx:id="machineidinput" layoutX="175.0" layoutY="300.0" />
+   </children>
+</AnchorPane>
